@@ -31,7 +31,7 @@ const UpdateUser = () => {
 
   const submitForm = async(e)=>{
     e.preventDefault();
-    await axios.put(`http://localhost:3004/api/update/${id}`,user)
+    await axios.put(`https://mern-add-user.onrender.com/api/update/${id}`,user)
     .then((res)=> {
       toast.success(res.data.message);
       navigate("/");
