@@ -22,7 +22,7 @@ const UpdateUser = () => {
   }
 
   useEffect(()=>{
-    axios.get(`http://localhost:3004/api/getOne/${id}`)
+    axios.get(`https://mern-add-user.onrender.com/api/getOne/${id}`)
     .then((res)=>{
       setUser(res.data);
     })

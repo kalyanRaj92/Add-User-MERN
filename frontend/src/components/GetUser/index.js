@@ -10,14 +10,14 @@ const GetUser = () => {
 
     useEffect(() =>{
         const fetchedData = async() =>{
-            const res = await axios.get("http://localhost:3004/api/getall");
+            const res = await axios.get("https://mern-add-user.onrender.com/api/getall");
             setUsers(res.data);
         }
         fetchedData();
     },[])
 
     const deleteUser = async(userId)=>{
-        await axios.delete(`http://localhost:3004/api/delete/${userId}`)
+        await axios.delete(`https://mern-add-user.onrender.com/api/delete/${userId}`)
         .then((res)=> {
            setUsers((prevUser)=> prevUser.filter((user)=> user._id !== userId))
            toast.success(res.data.message);
